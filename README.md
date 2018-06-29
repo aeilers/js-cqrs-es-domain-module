@@ -23,14 +23,14 @@ This example evolves the previous [hive-io-rest-example](https://www.npmjs.com/p
 ### Endpoints
 Once you get the app running using the [setup instructions](#getting-started) below, you can use the application from the following endpoint(s):
 - `http://localhost/posts (GET, POST)`
-    - POST [API JSON Schema](https://github.com/fnalabs/hive-js-rest-example/blob/master/src/schemas/json/Post.json)
+    - POST [API JSON Schema](https://github.com/fnalabs/hive-js-domain-example/blob/master/src/schemas/json/commands/CreateContent.json)
         ```
         {
           "text": "something"
         }
         ```
 - `http://localhost/posts/<postId> (GET, PATCH, DELETE)`
-    - PATCH [API JSON Schema](https://github.com/fnalabs/hive-js-rest-example/blob/master/src/schemas/json/Post.json)
+    - PATCH [API JSON Schema](https://github.com/fnalabs/hive-js-domain-example/blob/master/src/schemas/json/commands/EditContent.json)
         ```
         {
           "text": "something different"
