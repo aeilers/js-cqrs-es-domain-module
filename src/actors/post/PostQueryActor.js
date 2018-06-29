@@ -16,7 +16,7 @@ const VIEW_SCHEMA = Symbol('View schema')
 
 // constants
 const REFS = {
-  'https://hiveframework.io/api/v1/models/PostId': PostId
+  'https://hiveframework.io/api/v2/models/PostId': PostId
 }
 
 /*
