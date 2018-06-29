@@ -6,7 +6,7 @@ import ViewedContentSchema from '../../schemas/json/events/ViewedContent.json'
 
 // constants
 const REFS = {
-  'https://hiveframework.io/api/v1/models/PostId': PostIdSchema
+  'https://hiveframework.io/api/v2/models/PostId': PostIdSchema
 }
 
 /*

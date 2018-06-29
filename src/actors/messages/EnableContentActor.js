@@ -9,8 +9,8 @@ import EnabledContentSchema from '../../schemas/json/events/EnabledContent.json'
 
 // constants
 const REFS = {
-  'https://hiveframework.io/api/v1/models/Content': ContentSchema,
-  'https://hiveframework.io/api/v1/models/PostId': PostIdSchema
+  'https://hiveframework.io/api/v2/models/Content': ContentSchema,
+  'https://hiveframework.io/api/v2/models/PostId': PostIdSchema
 }
 
 /*

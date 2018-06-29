@@ -10,8 +10,8 @@ import CreatedContentSchema from '../../schemas/json/events/CreatedContent.json'
 
 // constants
 const REFS = {
-  'https://hiveframework.io/api/v1/models/Content': ContentSchema,
-  'https://hiveframework.io/api/v1/models/PostId': PostIdSchema
+  'https://hiveframework.io/api/v2/models/Content': ContentSchema,
+  'https://hiveframework.io/api/v2/models/PostId': PostIdSchema
 }
 
 /*
