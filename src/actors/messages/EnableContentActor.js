@@ -1,5 +1,5 @@
 // imports
-import { parse, MessageActor, Schema } from 'hive-io'
+import { MessageActor, Schema } from 'hive-io'
 
 import ContentSchema from '../../schemas/json/Content.json'
 import PostIdSchema from '../../schemas/json/PostId.json'
@@ -17,10 +17,6 @@ const REFS = {
  * class EnableContentActor
  */
 class EnableContentActor extends MessageActor {
-  constructor (postSchema, enabledContentSchema) {
-    super(parse`/posts/${'id'}/content`, postSchema, enabledContentSchema)
-  }
-
   async perform (modelInst, data) {
     if (modelInst.enabled === true) throw new Error('#EnableContent: content already enabled')
 
@@ -28,7 +24,7 @@ class EnableContentActor extends MessageActor {
 
     model.enabled = true
 
-    return { id: model.id, command, event, model }
+    return { meta: { key: model.id }, command, event, model }
   }
 }
 
@@ -40,6 +36,6 @@ export default new Proxy(EnableContentActor, {
     const postSchema = await new Schema(PostSchema, REFS)
     const enabledContentSchema = await new Schema(EnabledContentSchema, REFS)
 
-    return new EnableContentActor(postSchema, enabledContentSchema)
+    return new EnableContentActor(undefined, postSchema, enabledContentSchema)
   }
 })

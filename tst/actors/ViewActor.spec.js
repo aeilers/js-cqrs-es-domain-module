@@ -38,7 +38,7 @@ describe('ViewActor', () => {
     viewSchema = await new Schema(ViewSchema, REFS)
 
     ViewActor = proxyquire('../../src/actors/ViewActor', {
-      'http': { request () { requestSpy(); return this }, end () { endSpy() } }
+      http: { request () { requestSpy(); return this }, end () { endSpy() } }
     })
     viewActor = await new ViewActor()
   })
